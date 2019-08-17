@@ -144,6 +144,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HashMap-遍历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/17/HashMap-遍历/">HashMap 遍历</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/17/HashMap-遍历/" class="archive-article-date">
+  	<time datetime="2019-08-17T07:23:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-17</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+
+<p>HashMap遍历</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/17/HashMap-遍历/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -170,49 +250,9 @@
         <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h3 id="1-泛型"><a href="#1-泛型" class="headerlink" title="1.泛型"></a>1.泛型</h3><p>  泛指类型 ,广泛的应用于集合中<br>  位于类或者接口名的后面,语法格式<e>,&lt;&gt;是泛型的标志,E泛型的代指字母,可以使用<br>任何单个的大写英文字母,但是 E  T   V  使用概率比较高.</e></p>
 <p>  泛型的本质是程序员自己制定的类型,在构建使用了泛型的类的对象的时候可以制定具体的类型,如果没有指定,默认为Object类型</p>
 <p>.集合</p>
-<h2 id="1）ArrayList"><a href="#1）ArrayList" class="headerlink" title="1）ArrayList"></a>1）ArrayList</h2><p>   包java.util<br>   底层基于Object类型的数组的实现,支持使用泛型自己指定的数据类型,提供了一些对于底层数据的访问的方法(增删改查)</p>
-<p>   本质:<br>   //存放具体数据的数组<br>   Object[] elementData;<br>   //数组长度<br>   int size;</p>
-<h5 id="1-ArrayList的构造方法"><a href="#1-ArrayList的构造方法" class="headerlink" title="1.ArrayList的构造方法"></a>1.ArrayList的构造方法</h5><p>  ArrayList()<br>  在1.8版本之前,构造一个长度为 10 的空对象数组<br>  在1.8版本之后,构造一个长度为 0 的空对象数组,当第一个元素添加进去的时候,<br>默认的数组就会被替换.</p>
-<p>  ArrayList(int initialCapacity)<br>  构造一个具有指定初始容量的空对象数组</p>
-<h5 id="ArrayList的常用方法"><a href="#ArrayList的常用方法" class="headerlink" title="ArrayList的常用方法"></a>ArrayList的常用方法</h5><p>1.添加元素<br>   boolean  add(E e)<br>   将指定的元素添加到ArrayList的尾部</p>
-<p>   void    add(int index, E element)<br>   将指定的元素插入ArrayList的指定位置<br>   int  index  必须&gt;=0<br>   注意:<br>   先保证ArrayList的容量不是0才可以添加元素,否则下标越界</p>
-<p>2.第一个元素添加的时候的操作<br>  使用空的构造方法构建的ArrayList是一个空的数组,第一个元素添加的时候<br>会触发自动扩容的算法,把指定的默认的长度10设置为当前的数组的长度</p>
-<p>3.删除所有的元素<br>   void clear()<br>   移除此列表中的所有元素</p>
-<p>4.获取指定位置的元素<br>   E get(int index)<br>   返回ArrayList中指定位置上的元素</p>
-<p>5.判断是否为空<br>   boolean  isEmpty()<br>   如果此列表中没有元素，则返回 true</p>
-<p>6.删除指定位置的元素<br>   E remove(int index)<br>   移除ArrayList中指定位置上的元素,并且把这个元素返回</p>
-<p>7.修改指定位置的元素<br>   E  set(int index, E element)<br>   用指定的元素替代ArrayList中指定位置上的元素,并且把替换之前的元素返回</p>
-<p>8.返回当前集合元素的个数<br>​    int    size()<br>​    返回此列表中的元素个数,就是size属性的get方法</p>
-<p>9.把集合转为数组<br>​    Object[]    toArray()<br>​    按从第一个到最后一个元素的顺序返回包含当前集合中所有元素的组成的数组<br>​<br>10.调整集合元素个数和容量的关系<br>​     void  trimToSize()<br>​     将此 ArrayList的容量调整为数组中元素的个数<br>​     一般在集合稳定之后使用,节约空间</p>
-<p>11.ArrayList的扩容实现<br>​     //参数:当前元素的个数+1<br>​     ensureCapacityInternal(size + 1);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">扩容的判断条件:</span><br><span class="line">// 当前元素的个数+1-数组的长度</span><br><span class="line">if (minCapacity - elementData.length &gt; 0)&#123;</span><br><span class="line">       grow(minCapacity);</span><br><span class="line">&#125;</span><br><span class="line">当且仅当元素存到数组最后一个位置之后,才进行扩容</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">扩容的源码:</span><br><span class="line">private void grow(int minCapacity) &#123;</span><br><span class="line">   int oldCapacity = elementData.length;</span><br><span class="line">   //扩容的长度是原数组长度的一半,新的长度是原来的1.5倍</span><br><span class="line">   int newCapacity = oldCapacity + (oldCapacity/2);</span><br><span class="line">   elementData = Arrays.copyOf(elementData, newCapacity);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>12.ArrayList的遍历<br>   方案一:for循环</p>
-<p>   方案二:for-each循环(增强for循环)</p>
-<p>   方案三:iterator(迭代器)遍历<br>   //先获取同步于当前集合的迭代器<br>   Iterator iterator = al.iterator();<br>   //while循环整合hasNext()方法进行判断<br>   while(iterator.hasNext()) {<br>​         //通过next方法获取下一个元素<br>​    Object element = iterator.next();<br>​<br>​    System.out.println(element);<br>   }</p>
-<p>13.关于迭代器<br>   Iterator<e> iterator()<br>   获取同步于当前集合的迭代器</e></p>
-<p>   Iterator接口源代码:<br>​    public interface Iterator<e> {<br>​        //判断当前集合是否还有下一个元素<br>​        boolean hasNext();<br>​        //获取下一个元素<br>       E next();<br>​    }</e></p>
-<p>14.需求:边遍历边删除元素<br>  普通for循环不行,增强for循环和迭代器会抛出异常,且完全相同<br>  本质:<br>  迭代器底层是基于增强for实现的</p>
-<p>15.ConcurrentModificationException 快速失败异常<br>   使用迭代器或者增强for循环对集合元素进行遍历删除的时候,迭代器都会抛出 ConcurrentModificationException,本质是因为remove方法底层操作数组元素的复制和移动,导致最直接的问题是数组元素的下标在每次删除之后的移动,增强for和迭代器都无法预知下标的移动.因此，面对并发的修改，迭代器很快就会完全失败，而不是冒着在将来某个不确定时间发生任意不确定行为的风险。</p>
-<p>16.修复快速失败异常<br>   迭代器和集合的元素是实时同步,设计了remove的方法,该方法属于迭代器而不是集合,<br>可以影响到集合的数据.</p>
-<p>   使用迭代器自身的remove方法删除元素,只能删除当前元素,而不能使用集合自带的remove方法</p>
-<h2 id="2）LinkedList"><a href="#2）LinkedList" class="headerlink" title="2）LinkedList"></a>2）LinkedList</h2><p>   包java.util<br>   基于链表结构的集合实现,大量的方法在功能上和ArrayList相同,代码的差异性很大<br>   是双向的链表结构,有prev指向上一个节点,有next指向下一个节点</p>
-<p>1.LinkedList的构造方法<br>   LinkedList()<br>   构造一个空链表结构</p>
-<p>2.链表结构<br>   Node  节点<br>   链表是节点按照一定的顺序组合生成的一串数据,藤壶</p>
-<p>   节点的源码:<br>   class Node<e> {<br>​        //存放具体数据的对象<br>​        E item;<br>​    //下一个节点的信息<br>​        Node<e> next;<br>​    //上一个节点的信息<br>​        Node<e> prev;</e></e></e></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) &#123;</span><br><span class="line">        this.item = element;</span><br><span class="line">        this.next = next;</span><br><span class="line">        this.prev = prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">记录节点的个数:</span><br><span class="line">int size = 0;</span><br></pre></td></tr></table></figure>
-
-<p>3.添加元素的方法<br>   boolean add(E e)<br>   将指定元素添加到此列表的结尾。<br>   void    add(int index, E element)<br>   在此列表中指定的位置插入指定的元素。</p>
-<p>   add(E e)源码实现:<br>   1)根据size判断当前节点的身份<br>​     第一个节点/最后一个节点/任意一个节点     </p>
-<p>   2)构建一个节点<br>​     new  Node(prev,item,next);</p>
-<p>   3)关联到之前的链表上</p>
-<p>   4)size++ </p>
-<p>​    </p>
-
+        
+          <a class="article-more-a" href="/2019/08/16/我的第一篇博文/#more">more >></a>
+        
       
 
       
@@ -282,7 +322,9 @@
       	</div>
     </div>
   </div>
+  <span id="busuanzi_container_site_uv">  本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -306,6 +348,8 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
 return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var e=r(54),i=r(2),o=e.get,u=e.key;e.exp({getOwnMetadata:function(t,n){return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=r(32),u=e.has,c=e.key,f=function(t,n,r){if(u(t,n,r))return!0;var e=o(n);return null!==e&&f(t,e,r)};e.exp({hasMetadata:function(t,n){return f(t,i(n),arguments.length<3?void 0:c(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=e.has,u=e.key;e.exp({hasOwnMetadata:function(t,n){return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=r(26),u=e.key,c=e.set;e.exp({metadata:function(t,n){return function(r,e){c(t,n,(void 0!==e?i:o)(r),u(e))}}})},function(t,n,r){var e=r(1);e(e.P+e.R,"Set",{toJSON:r(165)("Set")})},function(t,n,r){"use strict";var e=r(1),i=r(147)(!0);e(e.P,"String",{at:function(t){return i(this,t)}})},function(t,n,r){"use strict";var e=r(1),i=r(46),o=r(16),u=r(122),c=r(120),f=RegExp.prototype,a=function(t,n){this._r=t,this._s=n};r(139)(a,"RegExp String",function(){var t=this._r.exec(this._s);return{value:t,done:null===t}}),e(e.P,"String",{matchAll:function(t){if(i(this),!u(t))throw TypeError(t+" is not a regexp!");var n=String(this),r="flags"in f?String(t.flags):c.call(t),e=new RegExp(t.source,~r.indexOf("g")?r:"g"+r);return e.lastIndex=o(t.lastIndex),new a(e,n)}})},function(t,n,r){"use strict";var e=r(1),i=r(181);e(e.P,"String",{padEnd:function(t){return i(this,t,arguments.length>1?arguments[1]:void 0,!1)}})},function(t,n,r){"use strict";var e=r(1),i=r(181);e(e.P,"String",{padStart:function(t){return i(this,t,arguments.length>1?arguments[1]:void 0,!0)}})},function(t,n,r){"use strict";r(82)("trimLeft",function(t){return function(){return t(this,1)}},"trimStart")},function(t,n,r){"use strict";r(82)("trimRight",function(t){return function(){return t(this,2)}},"trimEnd")},function(t,n,r){r(153)("asyncIterator")},function(t,n,r){r(153)("observable")},function(t,n,r){var e=r(1);e(e.S,"System",{global:r(3)})},function(t,n,r){for(var e=r(155),i=r(28),o=r(3),u=r(27),c=r(80),f=r(7),a=f("iterator"),s=f("toStringTag"),l=c.Array,h=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],v=0;v<5;v++){var p,d=h[v],y=o[d],g=y&&y.prototype;if(g){g[a]||u(g,a,l),g[s]||u(g,s,d),c[d]=l;for(p in e)g[p]||i(g,p,e[p],!0)}}},function(t,n,r){var e=r(1),i=r(151);e(e.G+e.B,{setImmediate:i.set,clearImmediate:i.clear})},function(t,n,r){var e=r(3),i=r(1),o=r(121),u=r(207),c=e.navigator,f=!!c&&/MSIE .\./.test(c.userAgent),a=function(t){return f?function(n,r){return t(o(u,[].slice.call(arguments,2),"function"==typeof n?n:Function(n)),r)}:t};i(i.G+i.B+i.F*f,{setTimeout:a(e.setTimeout),setInterval:a(e.setInterval)})},function(t,n,r){r(330),r(269),r(271),r(270),r(273),r(275),r(280),r(274),r(272),r(282),r(281),r(277),r(278),r(276),r(268),r(279),r(283),r(284),r(236),r(238),r(237),r(286),r(285),r(256),r(266),r(267),r(257),r(258),r(259),r(260),r(261),r(262),r(263),r(264),r(265),r(239),r(240),r(241),r(242),r(243),r(244),r(245),r(246),r(247),r(248),r(249),r(250),r(251),r(252),r(253),r(254),r(255),r(317),r(322),r(329),r(320),r(312),r(313),r(318),r(323),r(325),r(308),r(309),r(310),r(311),r(314),r(315),r(316),r(319),r(321),r(324),r(326),r(327),r(328),r(231),r(233),r(232),r(235),r(234),r(220),r(218),r(224),r(221),r(227),r(229),r(217),r(223),r(214),r(228),r(212),r(226),r(225),r(219),r(222),r(211),r(213),r(216),r(215),r(230),r(155),r(302),r(307),r(184),r(303),r(304),r(305),r(306),r(287),r(183),r(185),r(186),r(342),r(331),r(332),r(337),r(340),r(341),r(335),r(338),r(336),r(339),r(333),r(334),r(288),r(289),r(290),r(291),r(292),r(295),r(293),r(294),r(296),r(297),r(298),r(299),r(301),r(300),r(343),r(369),r(372),r(371),r(373),r(374),r(370),r(375),r(376),r(354),r(357),r(353),r(351),r(352),r(355),r(356),r(346),r(368),r(377),r(345),r(347),r(349),r(348),r(350),r(359),r(360),r(362),r(361),r(364),r(363),r(365),r(366),r(367),r(344),r(358),r(380),r(379),r(378),t.exports=r(52)},function(t,n){function r(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var r=t.nextSibling;return r?t.parentNode.insertBefore(n,r):t.parentNode.appendChild(n)}t.exports=r},,,,,,,,,function(t,n,r){(function(n,r){!function(n){"use strict";function e(t,n,r,e){var i=n&&n.prototype instanceof o?n:o,u=Object.create(i.prototype),c=new p(e||[]);return u._invoke=s(t,r,c),u}function i(t,n,r){try{return{type:"normal",arg:t.call(n,r)}}catch(t){return{type:"throw",arg:t}}}function o(){}function u(){}function c(){}function f(t){["next","throw","return"].forEach(function(n){t[n]=function(t){return this._invoke(n,t)}})}function a(t){function n(r,e,o,u){var c=i(t[r],t,e);if("throw"!==c.type){var f=c.arg,a=f.value;return a&&"object"==typeof a&&m.call(a,"__await")?Promise.resolve(a.__await).then(function(t){n("next",t,o,u)},function(t){n("throw",t,o,u)}):Promise.resolve(a).then(function(t){f.value=t,o(f)},u)}u(c.arg)}function e(t,r){function e(){return new Promise(function(e,i){n(t,r,e,i)})}return o=o?o.then(e,e):e()}"object"==typeof r&&r.domain&&(n=r.domain.bind(n));var o;this._invoke=e}function s(t,n,r){var e=P;return function(o,u){if(e===F)throw new Error("Generator is already running");if(e===M){if("throw"===o)throw u;return y()}for(r.method=o,r.arg=u;;){var c=r.delegate;if(c){var f=l(c,r);if(f){if(f===A)continue;return f}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if(e===P)throw e=M,r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);e=F;var a=i(t,n,r);if("normal"===a.type){if(e=r.done?M:j,a.arg===A)continue;return{value:a.arg,done:r.done}}"throw"===a.type&&(e=M,r.method="throw",r.arg=a.arg)}}}function l(t,n){var r=t.iterator[n.method];if(r===g){if(n.delegate=null,"throw"===n.method){if(t.iterator.return&&(n.method="return",n.arg=g,l(t,n),"throw"===n.method))return A;n.method="throw",n.arg=new TypeError("The iterator does not provide a 'throw' method")}return A}var e=i(r,t.iterator,n.arg);if("throw"===e.type)return n.method="throw",n.arg=e.arg,n.delegate=null,A;var o=e.arg;return o?o.done?(n[t.resultName]=o.value,n.next=t.nextLoc,"return"!==n.method&&(n.method="next",n.arg=g),n.delegate=null,A):o:(n.method="throw",n.arg=new TypeError("iterator result is not an object"),n.delegate=null,A)}function h(t){var n={tryLoc:t[0]};1 in t&&(n.catchLoc=t[1]),2 in t&&(n.finallyLoc=t[2],n.afterLoc=t[3]),this.tryEntries.push(n)}function v(t){var n=t.completion||{};n.type="normal",delete n.arg,t.completion=n}function p(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(h,this),this.reset(!0)}function d(t){if(t){var n=t[w];if(n)return n.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,e=function n(){for(;++r<t.length;)if(m.call(t,r))return n.value=t[r],n.done=!1,n;return n.value=g,n.done=!0,n};return e.next=e}}return{next:y}}function y(){return{value:g,done:!0}}var g,b=Object.prototype,m=b.hasOwnProperty,x="function"==typeof Symbol?Symbol:{},w=x.iterator||"@@iterator",S=x.asyncIterator||"@@asyncIterator",_=x.toStringTag||"@@toStringTag",O="object"==typeof t,E=n.regeneratorRuntime;if(E)return void(O&&(t.exports=E));E=n.regeneratorRuntime=O?t.exports:{},E.wrap=e;var P="suspendedStart",j="suspendedYield",F="executing",M="completed",A={},N={};N[w]=function(){return this};var T=Object.getPrototypeOf,I=T&&T(T(d([])));I&&I!==b&&m.call(I,w)&&(N=I);var k=c.prototype=o.prototype=Object.create(N);u.prototype=k.constructor=c,c.constructor=u,c[_]=u.displayName="GeneratorFunction",E.isGeneratorFunction=function(t){var n="function"==typeof t&&t.constructor;return!!n&&(n===u||"GeneratorFunction"===(n.displayName||n.name))},E.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,c):(t.__proto__=c,_ in t||(t[_]="GeneratorFunction")),t.prototype=Object.create(k),t},E.awrap=function(t){return{__await:t}},f(a.prototype),a.prototype[S]=function(){return this},E.AsyncIterator=a,E.async=function(t,n,r,i){var o=new a(e(t,n,r,i));return E.isGeneratorFunction(n)?o:o.next().then(function(t){return t.done?t.value:o.next()})},f(k),k[_]="Generator",k.toString=function(){return"[object Generator]"},E.keys=function(t){var n=[];for(var r in t)n.push(r);return n.reverse(),function r(){for(;n.length;){var e=n.pop();if(e in t)return r.value=e,r.done=!1,r}return r.done=!0,r}},E.values=d,p.prototype={constructor:p,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=g,this.done=!1,this.delegate=null,this.method="next",this.arg=g,this.tryEntries.forEach(v),!t)for(var n in this)"t"===n.charAt(0)&&m.call(this,n)&&!isNaN(+n.slice(1))&&(this[n]=g)},stop:function(){this.done=!0;var t=this.tryEntries[0],n=t.completion;if("throw"===n.type)throw n.arg;return this.rval},dispatchException:function(t){function n(n,e){return o.type="throw",o.arg=t,r.next=n,e&&(r.method="next",r.arg=g),!!e}if(this.done)throw t;for(var r=this,e=this.tryEntries.length-1;e>=0;--e){var i=this.tryEntries[e],o=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var u=m.call(i,"catchLoc"),c=m.call(i,"finallyLoc");if(u&&c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,n){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.tryLoc<=this.prev&&m.call(e,"finallyLoc")&&this.prev<e.finallyLoc){var i=e;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=n&&n<=i.finallyLoc&&(i=null);var o=i?i.completion:{};return o.type=t,o.arg=n,i?(this.method="next",this.next=i.finallyLoc,A):this.complete(o)},complete:function(t,n){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&n&&(this.next=n),A},finish:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),v(r),A}},catch:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.tryLoc===t){var e=r.completion;if("throw"===e.type){var i=e.arg;v(r)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(t,n,r){return this.delegate={iterator:d(t),resultName:n,nextLoc:r},"next"===this.method&&(this.arg=g),A}}}("object"==typeof n?n:"object"==typeof window?window:"object"==typeof self?self:this)}).call(n,function(){return this}(),r(158))}])</script><script src="/./main.0cf68a.js"></script><script>!function(){!function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)}("/slider.e37972.js")}()</script>
 
 
+
+<script  async  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
