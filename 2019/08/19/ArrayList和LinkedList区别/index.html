@@ -17,10 +17,12 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="ArrayList 和 LinkedList区别1）ArrayList：底层是一个动态数组:   transient Object[] elementData; 以数组的方式实现List接口 LinkedList:底层是一个基于双链表的动态数组 transient Node&amp;lt;E&amp;gt; 以数组和链表得方式实现List接口 2) 实际使用中从增删改查方面开看：">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-19T14:25:32.890Z">
+<meta property="og:image" content="http://pwhen9at9.bkt.clouddn.com/arrayLinked.png">
+<meta property="og:updated_time" content="2019-08-19T14:29:09.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArrayList和LinkedList区别">
 <meta name="twitter:description" content="ArrayList 和 LinkedList区别1）ArrayList：底层是一个动态数组:   transient Object[] elementData; 以数组的方式实现List接口 LinkedList:底层是一个基于双链表的动态数组 transient Node&amp;lt;E&amp;gt; 以数组和链表得方式实现List接口 2) 实际使用中从增删改查方面开看：">
+<meta name="twitter:image" content="http://pwhen9at9.bkt.clouddn.com/arrayLinked.png">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
   
@@ -289,6 +291,8 @@
 </tbody></table>
 <p>随机查,改，改操作ArrayList优于LinkedList，因为LinkedList要移动指针</p>
 <p> 新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据</p>
+<img src="http://pwhen9at9.bkt.clouddn.com/arrayLinked.png">
+
 <p><strong>换句话说，ArrayList的实现用的是数组，LinkedList是基于链表，ArrayList适合查找，LinkedList适合增删</strong></p>
 
     
