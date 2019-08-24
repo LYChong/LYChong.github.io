@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="mysql 基本命令">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-21T12:47:44.101Z">
+<meta property="og:updated_time" content="2019-08-24T09:14:08.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql 基本命令">
 <meta name="twitter:description" content="mysql 基本命令">
@@ -227,7 +227,27 @@
 <p><strong>);</strong></p>
 <p>6、查看所有的表</p>
 <p><strong>show tables;</strong></p>
-<h4 id="表级别操作："><a href="#表级别操作：" class="headerlink" title="表级别操作："></a>表级别操作：</h4><h6 id="1、select-字段1-字段2-字段3-函数-昵称-from-表名"><a href="#1、select-字段1-字段2-字段3-函数-昵称-from-表名" class="headerlink" title="1、select 字段1,字段2,字段3/函数/昵称  from 表名;"></a>1、<strong>select 字段1,字段2,字段3/函数/昵称  from 表名;</strong></h6><h6 id="2、简单条件查询-select-字段1-字段2-字段3-函数-昵称-from-表名-where-条件"><a href="#2、简单条件查询-select-字段1-字段2-字段3-函数-昵称-from-表名-where-条件" class="headerlink" title="2、简单条件查询     select 字段1,字段2,字段3/函数/昵称  from 表名 where 条件"></a>2、简单条件查询     <strong>select 字段1,字段2,字段3/函数/昵称  from 表名 where 条件</strong></h6><p>​     查询所有男生的信息<br>  select snumber,sname,ssex,sage from student where ssex=”男”;   &lt;==&gt;</p>
+<h2 id="表级别操作："><a href="#表级别操作：" class="headerlink" title="表级别操作："></a>表级别操作：</h2><h3 id="增加操作："><a href="#增加操作：" class="headerlink" title="增加操作："></a>增加操作：</h3><p>1、insert into 表名 (字段名1，字段名2….) values(字段值1，字段值2…)</p>
+<p>2、insert into 表名(字段名1，字段名2….) values(字段值1,字段值2…),</p>
+<p>​                                            (字段值1,字段值2…),</p>
+<p>​                                            (字段值1,字段值2…);</p>
+<h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作:"></a>删除操作:</h3><h6 id="1、删除表中字段"><a href="#1、删除表中字段" class="headerlink" title="1、删除表中字段"></a>1、删除表中字段</h6><p>delete table 表名  drop 字段名；</p>
+<p>删除student 中的 address字段</p>
+<p>eg: delete table student drop address;</p>
+<h6 id="2、删除表中的数据"><a href="#2、删除表中的数据" class="headerlink" title="2、删除表中的数据"></a>2、删除表中的数据</h6><p>delete from 表名 where 条件</p>
+<p>删除表中成绩小于60的人</p>
+<p>eg:delete from student where grade &lt; 60</p>
+<h6 id="3、删除约束："><a href="#3、删除约束：" class="headerlink" title="3、删除约束："></a>3、删除约束：</h6><p>delete table 表名 drop foreign key 外键名</p>
+<h3 id="修改操作："><a href="#修改操作：" class="headerlink" title="修改操作："></a>修改操作：</h3><h6 id="1、修改表中数据："><a href="#1、修改表中数据：" class="headerlink" title="1、修改表中数据："></a>1、修改表中数据：</h6><p>update from 表名 set 字段名1=”字段值1”，字段名2=”字段值2”…  where 条件</p>
+<p>修改学号为 1 的名字为张三</p>
+<p>eg：update from student set name=”张三” where id = 1;</p>
+<h6 id="2、修改表操作："><a href="#2、修改表操作：" class="headerlink" title="2、修改表操作："></a>2、修改表操作：</h6><p>​         修改某字段为主键</p>
+<p>​    alter table 表名 add primary key(字段名);</p>
+<p>​    修改字段名 或 约束(要重新指定该字段的类型)</p>
+<p>​    alter table 表名 modify 字段名 类型 约束           （约束可写可不写）</p>
+<p>​    </p>
+<p>​    </p>
+<h6 id="1、select-字段1-字段2-字段3-函数-昵称-from-表名"><a href="#1、select-字段1-字段2-字段3-函数-昵称-from-表名" class="headerlink" title="1、select 字段1,字段2,字段3/函数/昵称  from 表名;"></a>1、<strong>select 字段1,字段2,字段3/函数/昵称  from 表名;</strong></h6><h6 id="2、简单条件查询-select-字段1-字段2-字段3-函数-昵称-from-表名-where-条件"><a href="#2、简单条件查询-select-字段1-字段2-字段3-函数-昵称-from-表名-where-条件" class="headerlink" title="2、简单条件查询     select 字段1,字段2,字段3/函数/昵称  from 表名 where 条件"></a>2、简单条件查询     <strong>select 字段1,字段2,字段3/函数/昵称  from 表名 where 条件</strong></h6><p>​     查询所有男生的信息<br>  select snumber,sname,ssex,sage from student where ssex=”男”;   &lt;==&gt;</p>
 <p>  select * from student where ssex=”男”;</p>
 <h6 id="3、select-字段1-字段2-字段3-函数-昵称-from-表名-where-between-…-and-…"><a href="#3、select-字段1-字段2-字段3-函数-昵称-from-表名-where-between-…-and-…" class="headerlink" title="3、select 字段1,字段2,字段3/函数/昵称  from 表名 where  between  … and …"></a>3、<strong>select 字段1,字段2,字段3/函数/昵称  from 表名 where  between  … and …</strong></h6><h6 id="4、别名"><a href="#4、别名" class="headerlink" title="4、别名"></a>4、<strong>别名</strong></h6><p>select 字段 as 别名，字段  as 别名 from 表名  as 别名  </p>
 <p>注意:<br>  1)别名随意,允许中文<br>  2)字段 as 别名,里面的as可以省略<br>  3)别名使用中文的时候,千万不要加””,低版本不兼容<br>  select sname as 姓名 ,snumber 学号 from student;<br>  4)在给表设置别名的时候不允许使用as<br>  5)可以使用表别名.字段的方式访问表中的字段<br>  6)如果在from前面或者where后面使用了表的别名,表必须设置别名</p>
@@ -540,11 +560,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>
