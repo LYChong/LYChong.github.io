@@ -181,6 +181,88 @@
             
 
   
+    <article id="post-数组转化为ArrayList" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/10/21/数组转化为ArrayList/" target="_blank">数组转化为ArrayList</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/10/21/数组转化为ArrayList/" class="archive-article-date">
+        <time datetime="2019-10-21T02:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">String[] str = &#123; <span class="string">"张三"</span>, <span class="string">"李四"</span>, <span class="string">"王五"</span> &#125;;</span><br><span class="line">	<span class="comment">// 最简便的方式   ( Arrays.asList() )</span></span><br><span class="line">	ArrayList&lt;String&gt; List = <span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(str));</span><br><span class="line">	System.out.println(List.toString());</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 采用stream方式  java8 以后推荐</span></span><br><span class="line">	List list1 = Arrays.stream(str).collect(Collectors.toList());</span><br><span class="line">	System.out.println(list1.toString());</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 基础数据类型数组 转换为list集合  依赖boxed自动装箱</span></span><br><span class="line">	<span class="keyword">int</span>[] ints = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125;;</span><br><span class="line">	List&lt;Integer&gt; list2 = Arrays.stream(ints).boxed().collect(Collectors.toList());</span><br><span class="line">	System.out.println(list2.toString());</span><br></pre></td></tr></table></figure>
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/10/21/数组转化为ArrayList/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CentOS-7-2填坑搭建图形化界面并远程连接填坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
